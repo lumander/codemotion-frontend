@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: sample
-    app.kubernetes.io/instance: sample-instance
-    app.kubernetes.io/name: sample
-  name: sample
+    app: lumander-next-js
+    app.kubernetes.io/instance: lumander-next-js-instance
+    app.kubernetes.io/name: lumander-next-js
+  name: lumander-next-js
 spec:
   ports:
     - name: http
@@ -13,7 +13,7 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    app.kubernetes.io/instance: sample-instance
-    app.kubernetes.io/name: sample
+    app.kubernetes.io/instance: lumander-next-js-instance
+    app.kubernetes.io/name: lumander-next-js
   sessionAffinity: None
   type: ClusterIP

@@ -5,6 +5,6 @@ resources:
   - service.yaml
   - route.yaml
 commonLabels:
-  app: sample
-  app.kubernetes.io/instance: sample-instance
-  app.kubernetes.io/name: sample
+  app: lumander-next-js
+  app.kubernetes.io/instance: lumander-next-js-instance
+  app.kubernetes.io/name: lumander-next-js

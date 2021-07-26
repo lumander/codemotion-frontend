@@ -4,12 +4,12 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
     openshift.io/host.generated: "true"
-  name: sample
+  name: lumander-next-js
 spec:
   tls:
     termination: edge
   to:
     kind: Service
-    name: sample
+    name: lumander-next-js
     weight: 100
   wildcardPolicy: None
