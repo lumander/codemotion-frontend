@@ -4,12 +4,12 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
     openshift.io/host.generated: "true"
-  name: lumander-next-js
+  name: codemotion-frontend
 spec:
   tls:
     termination: edge
   to:
     kind: Service
-    name: lumander-next-js
+    name: codemotion-frontend
     weight: 100
   wildcardPolicy: None
