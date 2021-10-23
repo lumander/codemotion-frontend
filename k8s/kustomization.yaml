@@ -5,6 +5,6 @@ resources:
   - service.yaml
   - route.yaml
 commonLabels:
-  app: lumander-next-js
-  app.kubernetes.io/instance: lumander-next-js-instance
-  app.kubernetes.io/name: lumander-next-js
+  app: codemotion-frontend
+  app.kubernetes.io/instance: codemotion-frontend
+  app.kubernetes.io/name: codemotion-frontend
