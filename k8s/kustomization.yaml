@@ -8,3 +8,4 @@ commonLabels:
   app: codemotion-frontend
   app.kubernetes.io/instance: codemotion-frontend
   app.kubernetes.io/name: codemotion-frontend
+namespace: dev
