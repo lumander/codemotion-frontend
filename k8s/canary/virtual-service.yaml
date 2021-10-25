@@ -6,7 +6,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - codemotion-gw
+  - codemotion-gw-canary
   http:
   - match:
     - headers:
