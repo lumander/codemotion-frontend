@@ -2,13 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
     app.openshift.io/vcs-uri: https://github.com/lumander/codemotion-frontend
     sidecar.istio.io/inject: "true"
   labels:
-    app: codemotion-frontend
-    app.kubernetes.io/instance: codemotion-frontend
-    app.kubernetes.io/name: codemotion-frontend
     app.openshift.io/runtime: js
   name: codemotion-frontend
 spec:

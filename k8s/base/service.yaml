@@ -3,8 +3,6 @@ kind: Service
 metadata:
   labels:
     app: codemotion-frontend
-    app.kubernetes.io/instance: codemotion-frontend
-    app.kubernetes.io/name: codemotion-frontend
   name: codemotion-frontend
 spec:
   ports:

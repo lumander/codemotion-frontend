@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: codemotion-frontend-vservice
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - codemotion-gw
+  http:
+  - route:
+    - destination:
+        host: codemotion-frontend
+        port:
+          number: 8080
