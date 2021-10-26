@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   annotations:
     app.openshift.io/vcs-uri: https://github.com/lumander/codemotion-frontend
-    sidecar.istio.io/inject: "true"
   labels:
     app.openshift.io/runtime: js
   name: codemotion-frontend
@@ -18,6 +17,8 @@ spec:
   template:
     metadata:
       creationTimestamp: null
+      annotations:
+        sidecar.istio.io/inject: "true"
       labels:
         app.kubernetes.io/instance: codemotion-frontend
         app.kubernetes.io/name: codemotion-frontend
