@@ -1,13 +1,14 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: codemotion-frontend-vservice
+  name: {{ include "codemotion-chart.appname" .}}-vsvc
 spec:
   hosts:
   - "*"
   gateways:
-  - codemotion-gw-canary
+  - {{ include "codemotion-chart.appname" .}}-gw
   http:
+  {{- if eq .Values.deploymentType "canary" }}
   - match:
     - headers:
         deployment:
@@ -21,4 +22,11 @@ spec:
     - destination:
         host: codemotion-frontend
         port:
-          number: 8080
+          number: 80
+  {{- else}}
+  - route:
+    - destination:
+        host: codemotion-frontend
+        port:
+          number: 80
+{{- end }}
