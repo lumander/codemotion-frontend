@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Codemotion Example App - Canary Version!!
+          Welcome to Codemotion Example App!
         </h1>
 
         <p className={styles.description}>
