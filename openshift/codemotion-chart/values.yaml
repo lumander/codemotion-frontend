@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: quay.io/lumander/codemotion-frontend
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -32,6 +32,10 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+
+deployment:
+  deploymentType: 
+  branch: 
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
