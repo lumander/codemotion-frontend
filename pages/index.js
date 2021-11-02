@@ -12,8 +12,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to Codemotion Example App - Refactor branch!
+        <h1 className={styles.title} style="color:blue">
+          Welcome to Codemotion Example App
         </h1>
 
         <p className={styles.description}>
