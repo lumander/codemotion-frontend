@@ -6,24 +6,25 @@ spec:
   hosts:
   - "*"
   gateways:
-  - {{ include "codemotion-chart.appname" .}}-gw
+  - {{ .Release.Namespace }}-gw
   http:
-  {{- if eq .Values.deploymentType "canary" }}
+  {{- if eq .Values.deployment.deploymentType "headerBased" }}
   - match:
     - headers:
-        deployment:
-          exact: canary
+        branch:
+          exact: {{ .Values.deployment.branch }}
     route:
     - destination:
-        host: codemotion-frontend-canary
+        host: codemotion-frontend-{{ .Values.deployment.branch }}
         port:
           number: 80
+  {{- else if eq .Values.deployment.deploymentType "canary" }}
   - route:
     - destination:
         host: codemotion-frontend
         port:
           number: 80
-  {{- else}}
+  {{- else if eq .Values.deployment.deploymentType "rolling" }}
   - route:
     - destination:
         host: codemotion-frontend
