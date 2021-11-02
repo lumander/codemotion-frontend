@@ -1,15 +1,15 @@
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
-  name: prod-gw
+  name: gw
   namespace: prod
 spec:
   selector:
     istio: ingressgateway # use istio default controller
   servers:
   - port:
-      number: 8082
+      number: 80
       name: http
       protocol: HTTP
     hosts:
-    - "*.eu-de.containers.appdomain.cloud"
+    - "*"
