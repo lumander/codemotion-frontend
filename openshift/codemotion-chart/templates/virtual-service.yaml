@@ -6,7 +6,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - {{ .Release.Namespace }}-gw
+  - gw
   http:
   {{- if eq .Values.deployment.deploymentType "headerBased" }}
   - match:
