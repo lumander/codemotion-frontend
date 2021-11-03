@@ -54,7 +54,11 @@ ref: {{ .Values.deployment.branch }}
 Selector labels
 */}}
 {{- define "codemotion-chart.selectorLabels" -}}
-app: {{ .Release.Name }}
+{{- if eq .Values.deployment.deploymentType "canary" }}
+app: {{ printf "%s" .Release.Name | trimSuffix "-canary" }}
+{{- else }}
+app: {{ printf "%s" .Release.Name }}
+{{- end }}
 {{- end }}
 
 {{/*
