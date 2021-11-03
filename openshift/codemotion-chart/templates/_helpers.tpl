@@ -47,6 +47,7 @@ helm.sh/chart: {{ include "codemotion-chart.chart" . }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
+ref: {{ .Values.deployment.branch }}
 {{- end }}
 
 {{/*
@@ -54,6 +55,11 @@ Selector labels
 */}}
 {{- define "codemotion-chart.selectorLabels" -}}
 app: {{ .Release.Name }}
-version: {{ .Values.deploymentType }}
 {{- end }}
 
+{{/*
+Istio Selector labels
+*/}}
+{{- define "codemotion-chart.istioSelectorLabels" -}}
+version: {{ .Values.deployment.deploymentType }}
+{{- end }}

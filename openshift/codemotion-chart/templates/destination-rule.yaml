@@ -1,0 +1,15 @@
+{{- if eq .Values.deployment.deploymentType "canary" }}
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: {{ include "codemotion-chart.appname" .}}-dr
+spec:
+  host: codemotion-frontend
+  subsets:
+  - name: rolling
+    labels:
+      version: rolling
+  - name: canary
+    labels:
+      version: canary
+{{- end }}
