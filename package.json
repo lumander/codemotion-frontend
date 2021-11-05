@@ -9,14 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.0",
-    "carbon-components": "^9.48.2",
-    "carbon-components-react": "^6.48.0",
+    "carbon-components": "10.47.1",
+    "carbon-components-react": "7.47.2",
     "carbon-icons": "^7.0.7",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+<<<<<<< HEAD
     "node-sass": "^4.7.2",
+=======
+>>>>>>> b3b69a0dfd4bdf755a9bb8be6bad6906343b7879
     "react-router-dom": "^6.0.0"
   },
   "devDependencies": {
