@@ -1,16 +1,11 @@
 import 'carbon-components/scss/globals/scss/styles.scss';
 
 import React, { Component } from 'react';
-import { Accordion, AccordionItem } from 'carbon-components-react';
-
+import { Accordion, AccordionItem, Button } from 'carbon-components-react';
 import '../styles/App.scss';
 
 class App extends Component {
-//     url = "wttr.in/Milan?lang=it";
-//fetch(url)
-//    .then(response => response.json())
-//    .then(data => this.setState({ applications: data }))
-//    
+
   render() {
     return (
       <>
@@ -67,7 +62,14 @@ class App extends Component {
                 </a>
             </AccordionItem>
           </Accordion>
+          <div className="grid">
+          <a href="https://wttr.in/Berlin?lang=it" className="card">
+          <Button className="App__Button">What's the weather like?</Button>
+          </a>
+        </div>
+          
         </article>
+
       </>
     );
   }

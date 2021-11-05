@@ -1,4 +1,4 @@
-FROM quay.io/ibmgaragecloud/node:lts-stretch
+FROM node:14
 WORKDIR /app
 COPY . .
 RUN npm install && chmod -R 777 /app

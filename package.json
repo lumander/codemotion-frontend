@@ -1,26 +1,18 @@
 {
   "name": "codemotion-frontend",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.0",
     "carbon-components": "^9.48.2",
     "carbon-components-react": "^6.48.0",
     "carbon-icons": "^7.0.7",
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^7.0.2",
     "node-sass": "^4.7.2",
-    "react-router-dom": "^6.0.0"
-  },
-  "devDependencies": {
-    "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1"
   }
 }
