@@ -1,7 +1,7 @@
 import 'carbon-components/scss/globals/scss/styles.scss';
 
 import React, { Component } from 'react';
-import { Accordion, AccordionItem } from 'carbon-components-react';
+import { Accordion, AccordionItem, Button } from 'carbon-components-react';
 
 import '../styles/App.scss';
 
@@ -63,6 +63,11 @@ class App extends Component {
                 </a>
             </AccordionItem>
           </Accordion>
+          <div className="grid">
+          <a className="card">
+          <Button className="App__Button">Push me!</Button>
+          </a>
+        </div>
         </article>
       </>
     );
