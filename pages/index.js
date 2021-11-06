@@ -6,11 +6,7 @@ import { Accordion, AccordionItem } from 'carbon-components-react';
 import '../styles/App.scss';
 
 class App extends Component {
-//     url = "wttr.in/Milan?lang=it";
-//fetch(url)
-//    .then(response => response.json())
-//    .then(data => this.setState({ applications: data }))
-//    
+
   render() {
     return (
       <>
