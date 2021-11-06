@@ -1,3 +1,23 @@
+.headerSup {
+  background-color: #222;
+  height: 20px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.header {
+  background-color: #002d9c;
+  height: 80px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -45,7 +65,7 @@
 }
 
 .title {
-  color: yellow;
+  color: black;
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
@@ -82,9 +102,10 @@
 .card {
   margin: 1rem;
   padding: 1.5rem;
-  text-align: left;
+  text-align: center;
   color: inherit;
   text-decoration: none;
+  justify-content: center;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
