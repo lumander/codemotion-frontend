@@ -10,11 +10,12 @@
 
 /* 
  Gray 40 #a8a8a8
+ Red  60 #da1e28
  Blue 80 #002d9c 
 */
 
 .header {
-  background-color: #a8a8a8; 
+  background-color: #da1e28; 
   height: 80px;
   padding: 20px;
   color: white;
