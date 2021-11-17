@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+export default function Home({ posts }) {
   return (
+
     <div >
       <Head>
         <title>Codemotion Frontend Example App</title>
@@ -31,24 +33,23 @@ export default function Home() {
         <p className={styles.description}>
           Tech Stack
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://docs.openshift.com/container-platform/4.6/welcome/index.html" className={styles.card}>
-            <h2>RedHat OpenShift</h2>
-          </a>
-
-          <a href="https://tekton.dev/" className={styles.card}>
-            <h2>Tekton</h2>
-          </a>
-          <a href="https://istio.io/" className={styles.card}>
-            <h2>Istio</h2>
-          </a>
-          <a
-            href="https://helm.sh/" className={styles.card}>
-            <h2>Helm</h2>
-          </a>
-        </div>
+          <div className={styles.grid}>
+            { posts.map((post) => (
+              <a href={post.description} className={styles.card}>
+                <h2>{post.name}</h2>
+              </a>
+            ))}
+          </div>
       </main>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const res = await fetch(`http://inventory.dev.svc.cluster.local:8080/item/all`)
+  const posts = await res.json()
+
+  return {
+    props: { posts }, // will be passed to the page component as props
+  }
 }
