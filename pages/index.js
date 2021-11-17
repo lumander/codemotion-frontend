@@ -46,7 +46,8 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`http://inventory.dev.svc.cluster.local:8080/item/all`)
+  const namespace = process.env.NAMESPACE;
+  const res = await fetch(`http://inventory.${namespace}.svc.cluster.local:8080/item/all`)
   const posts = await res.json()
 
   return {
